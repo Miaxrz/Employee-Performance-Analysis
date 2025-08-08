@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Employee Performance Predictor</title>
+</head>
+<body>
+
+    <h1>Employee Performance Predictor</h1>
+    <form method="post" action="/predict">
+        <label>Employee Last Salary Hike Percent</label><br>
+        <input type="text" name="EmpLastSalaryHikePercent"><br><br>
+
+        <label>Employee Environment Satisfaction</label><br>
+        <input type="text" name="EmpEnvironmentSatisfaction"><br><br>
+
+        <label>Years Since Last Promotion</label><br>
+        <input type="text" name="YearsSinceLastPromotion"><br><br>
+
+        <input type="submit" value="Predict"><br><br>
+    </form>
+    {% if result %}
+         <p>{{ result }}</p>
+    {% endif %}
+
+</body>
+</html>
